@@ -1,0 +1,5 @@
+CFLAGS   += -w $(HTM_RETRIES) $(RETRY_POLICY)
+
+CPPFLAGS := $(CFLAGS)
+LIBS     += $(CPPFLAGS) -I -lboost_system -ltcmalloc -lrt -lpthread -mcpu=power8 -mtune=power8 -lm 
+LDFLAGS  += $(LIBS)
